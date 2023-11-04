@@ -100,7 +100,7 @@ def show_nums(*args):
 def finder(arg:str):
     find_info = ""
     for contact in contacts:
-        rec_str = str(contacts[contact].name) + str(contacts[contact].phones)
+        rec_str = str(contacts[contact].name).lower() + str(contacts[contact].phones).lower()
         if arg.lower() in rec_str:
             find_info += str(contacts[contact]) + "\n"
         else:
